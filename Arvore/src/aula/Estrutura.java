@@ -72,6 +72,39 @@ public void inOrdem(No no) {
 		inOrdem(no.getDireita());
 	}
 }
+public No valorMinimo() {
+		return this.valorMinimo(raiz);
+	}
+	private No valorMinimo(No no) {
+		if(no.getEsquerda()!= null) {
+		no= valorMinimo(no.getEsquerda());
+		}
+		return no;
+	}
 
+	public No valorMaximo() {
+		return this.valorMaximo(raiz);
+	}
+	public No valorMaximo(No no) {
+	if(no.getDireita()!= null) {
+		no= valorMaximo(no.getDireita());
+	}
+	return no;
+}
+	
+	public No removerValorMinimo() {
+		return this.removerValorMinino(raiz);
+	}
+	private No removerValorMinino(No no) {
+	if(no.getEsquerda()==null) {
+		return no.getDireita();
+		
+	}else {
+		no.setEsquerda(removerValorMinino(no.getEsquerda()));
+		return no;
+	}
+	
+		
+	}
 
 }
