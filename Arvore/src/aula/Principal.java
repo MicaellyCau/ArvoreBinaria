@@ -12,5 +12,14 @@ public class Principal {
 	e.inserir(2);
 	
 	e.inOrdem();
+	No n = new No();
+			n= e.valorMinimo();
+			System.out.println("\n Valor minimo : "+n.getValor());
+			n=e.valorMaximo();
+			System.out.println("\n Valor maximo: "+n.getValor());
+			
+	e.removerValorMinimo();
+	System.out.println("\n");
+	e.posOrdem();
 }
 }
